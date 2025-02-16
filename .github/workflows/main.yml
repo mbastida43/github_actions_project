@@ -25,7 +25,8 @@ jobs:
     steps:
       - name: "Verificação da versão do NodeJS atual"
         run: node --version
-      - uses: actions/setup-node@v4.2.0
+      - name: "Definicação da versão 22.14.0 do NodeJS"
+        uses: actions/setup-node@v4.2.0
         with:
           node-version: '22.14.0'
       - name: "Verificação da versão do NodeJS atual depois de instalado"
