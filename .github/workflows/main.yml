@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 jobs:
   primero_job:
-    name: "Meu primeri Job"
+    name: "Meu primerio Job"
     runs-on: ubuntu-latest
     steps:
       - name: "Minha primeira ação"
