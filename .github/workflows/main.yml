@@ -1,7 +1,7 @@
 name: primeira-peline
 on:
   push:
-  - branches: ["main"] 
+    branches: ["main"] 
   workflow_dispatch:
 jobs:
   primero_job:
@@ -11,7 +11,7 @@ jobs:
       - name: "Minha primeira ação"
         run: echo "Hello World !!!"
       - name: "Segunda ação"
-        run:
+        run: |
           echo "Voce criou o seu primeiro workflow !!!}"
           echo "Parabéns !!!"
           
