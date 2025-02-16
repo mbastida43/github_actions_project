@@ -4,15 +4,14 @@ on:
     branches: ["main"] 
   workflow_dispatch:
 jobs:
-  primero_job:
+  primero-job:
     name: "Meu primerio Job"
     runs-on: ubuntu-latest
     steps:
       - name: "Minha primeira ação"
-        shell:  
         run: echo "Hello World !!!"
       - name: "Segunda ação"
-        run:
+        run: |
           echo "Voce criou o seu primeiro workflow !!!}"
           echo "Parabéns !!!"
       - name: "Script Python"
