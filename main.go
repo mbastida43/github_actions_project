@@ -6,7 +6,7 @@ import 	"fmt"
 
 func index(w http.ResponseWriter, r *http.Request) {
 	w.header().Set("Content-Type", "text/plain")
-	fmt.FPrintf(w, "Aplicação exemplo - 2")
+	fmt.FPrintf(w, "Aplicação Exemplo - V2")
 }
 	
 func main() {
