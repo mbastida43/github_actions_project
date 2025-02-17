@@ -4,8 +4,8 @@ on:
     branches: ["main"] 
   workflow_dispatch:
 jobs:
-  primero_job:
-    name: "Meu primeri Job"
+  primero-job:
+    name: "Meu primeiro Job"
     runs-on: ubuntu-latest
     steps:
       - name: "Minha primeira ação"
@@ -14,5 +14,23 @@ jobs:
         run: |
           echo "Voce criou o seu primeiro workflow !!!}"
           echo "Parabéns !!!"
-          
+      - name: "Script Python"
+        run: |
+          variavel = "Hello World !!!"
+          print(variavel)
+        shell: python
+  segundo-job:
+    name: "Instalação do ambiente NodeJS"
+    runs-on: ubuntu-latest
+    needs: [primero-job]
+    steps:
+      - name: "Verificação da versão do NodeJS atual"
+        run: node --version
+      - name: "Definicação da versão 22.14.0 do NodeJS"
+        uses: actions/setup-node@v4.2.0
+        with:
+          node-version: '22.14.0'
+      - name: "Verificação da versão do NodeJS atual depois de instalado"
+        run: node --version
+    
         
