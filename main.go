@@ -1,9 +1,15 @@
 package main
 
-import "fmt"
+import 	"fmt"
+		"log"
+		"net/http"
 
+func index(w http.ResponseWriter, r *http.Request) {
+	w.header().Set("Content-Type", "text/plain")
+	fmt.FPrintf(w, "Aplicação exemplo - 2.0")
+}
+	
 func main() {
-	fmt.Println("Desenvolvimento")
-	fmt.Println("Feature-XPTO")
-	fmt.Println("Hotfix-XPTO")
+	http.HandleFunc("/", index)
+	log.Fatal(http.ListenAndServer("0.0.0.0:5000", nil))
 }
